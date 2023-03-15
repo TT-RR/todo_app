@@ -2,6 +2,7 @@ package config
 
 import (
 	"log"
+	"todo_app/utils"
 
 	"gopkg.in/go-ini/ini.v1"
 )
@@ -14,6 +15,7 @@ type ConfigList struct {
 	Static    string
 }
 
+// グローバルに定義しておくことで、外部からもアクセス可能
 var Config ConfigList
 
 func init() {
