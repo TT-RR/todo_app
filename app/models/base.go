@@ -6,6 +6,7 @@ import (
 	"log"
 	"todo_app/config"
 
+	"github.com/google/uuid"
 	_ "github.com/mattn/go-sqlite3"
 )
 
@@ -35,4 +36,10 @@ func init() {
 	)`, tableNameUser)
 
 	Db.Exec(cmdU)
+}
+
+// uuidの作成
+func createUUID() (uuidobj uuid.UUID) {
+	uuidobj, _ = uuid.NewUUID()
+	return uuidobj
 }
